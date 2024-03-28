@@ -8,14 +8,23 @@
         <version>3.2.4</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>com.code</groupId>
     <artifactId>walk</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+
     <name>walk</name>
     <description>walk</description>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>walk_server</module>
+    </modules>
+
     <properties>
         <java.version>21</java.version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
