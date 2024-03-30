@@ -10,10 +10,10 @@ public class PageReqVO {
     /**
      * 页数
      */
-    String pageNo;
+    Integer pageNum;
 
     /**
      * 容量
      */
-    String pageSize;
+    Integer pageSize;
 }
