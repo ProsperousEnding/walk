@@ -1,17 +1,13 @@
 package com.code.server.service.impl;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.code.server.entity.Website;
 import com.code.server.mapper.WebsiteMapper;
 import com.code.server.pojo.vo.req.PageReqVO;
 import com.code.server.service.WebsiteService;
-import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 /**
  * @author ProsperousEnding
@@ -26,11 +22,9 @@ public class WebsiteServiceImpl extends ServiceImpl<WebsiteMapper, Website>
     private final WebsiteMapper websiteMapper;
 
     @Override
-    public PageInfo<Website> queryNav(PageReqVO page) {
-        PageHelper.startPage(page);
-        List<Website> websites = websiteMapper.selectList(new QueryWrapper<>());
-        PageInfo<Website> websitePageInfo = new PageInfo<>(websites);
-        return websitePageInfo;
+    public Page<Website> queryNav(PageReqVO pageReqVO) {
+        Page<Website> page = new Page<>(pageReqVO.getPageNum(), pageReqVO.getPageSize());
+        return websiteMapper.selectPage(page, null);
     }
 }
 

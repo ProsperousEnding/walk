@@ -19,6 +19,7 @@ mybatis-plus:
   mapper-locations: classpath:/mappers/*.xml
   type-aliases-package: com.code.server.entity
   configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     auto-mapping-behavior: partial
     map-underscore-to-camel-case: true
     call-setters-on-nulls: true

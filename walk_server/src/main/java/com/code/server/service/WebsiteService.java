@@ -1,9 +1,9 @@
 package com.code.server.service;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.code.server.entity.Website;
 import com.code.server.pojo.vo.req.PageReqVO;
-import com.github.pagehelper.PageInfo;
 
 /**
  * @author ProsperousEnding
@@ -12,5 +12,5 @@ import com.github.pagehelper.PageInfo;
  */
 public interface WebsiteService extends IService<Website> {
 
-    PageInfo<Website> queryNav(PageReqVO page);
+    Page<Website> queryNav(PageReqVO page);
 }
