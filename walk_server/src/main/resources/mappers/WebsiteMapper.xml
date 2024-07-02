@@ -9,8 +9,9 @@
         <result property="url" column="url" jdbcType="VARCHAR"/>
         <result property="title" column="title" jdbcType="VARCHAR"/>
         <result property="webDescribe" column="web_describe" jdbcType="VARCHAR"/>
-        <result property="click" column="click" jdbcType="VARCHAR"/>
+        <result property="click" column="click" jdbcType="INTEGER"/>
         <result property="cover" column="cover" jdbcType="VARCHAR"/>
+        <result property="ico" column="ico" jdbcType="VARCHAR"/>
         <result property="categoryType" column="category_type" jdbcType="BIGINT"/>
         <result property="inclusionTime" column="inclusion_time" jdbcType="TIMESTAMP"/>
         <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
@@ -22,7 +23,7 @@
     <sql id="Base_Column_List">
         id
         ,url,title,
-        web_describe,click,cover,
+        web_describe,click,cover,ico,
         category_type,inclusion_time,create_time,
         update_time,del_tag,created_by
     </sql>

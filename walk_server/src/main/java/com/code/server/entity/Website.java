@@ -42,16 +42,16 @@ public class Website implements Serializable {
     private String webDescribe;
 
     /**
-     * 网址点击量
-     */
-    @TableField(value = "click")
-    private String click;
-
-    /**
      * 网址封面
      */
     @TableField(value = "cover")
     private String cover;
+
+    /**
+     * 网址图标
+     */
+    @TableField(value = "ico")
+    private String ico;
 
     /**
      * 网址分类id
@@ -64,6 +64,18 @@ public class Website implements Serializable {
      */
     @TableField(value = "inclusion_time")
     private Date inclusionTime;
+
+    /**
+     * 网址点击量
+     */
+    @TableField(value = "click")
+    private Integer click;
+
+    /**
+     * 创建人
+     */
+    @TableField(value = "created_by")
+    private Long createdBy;
 
     /**
      * 创建时间
@@ -83,11 +95,6 @@ public class Website implements Serializable {
     @TableField(value = "del_tag")
     private Integer delTag;
 
-    /**
-     * 创建人
-     */
-    @TableField(value = "created_by")
-    private Long createdBy;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
