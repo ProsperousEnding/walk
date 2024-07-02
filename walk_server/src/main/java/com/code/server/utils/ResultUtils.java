@@ -26,30 +26,22 @@ public class ResultUtils<T> implements Serializable {
     /**
      * 响应码
      */
-    @Getter
-    @Setter
     @ApiModelProperty(value = "响应标记：成功标记=0,失败1")
     private Integer code;
 
     /**
      * 响应信息
      */
-    @Getter
-    @Setter
     @ApiModelProperty(value = "响应信息")
     private String message;
 
     /**
      * 响应数据
      */
-    @Getter
-    @Setter
     @ApiModelProperty(value = "响应数据")
     private T data;
 
 
-    @Getter
-    @Setter
     @ApiModelProperty(value = "返回状态")
     private boolean status;
 
@@ -66,28 +58,28 @@ public class ResultUtils<T> implements Serializable {
      *
      * @return
      */
-    public static <T> ResultUtils success() {
+    public static <T> ResultUtils<T> success() {
         return new ResultUtils<T>(ResultCode.SUCCESS.getCode(), ResultCode.SUCCESS.getMessage(), null, true);
     }
 
     /**
      * 带数据返回
      */
-    public static <T> ResultUtils success(T data) {
+    public static <T> ResultUtils<T> success(T data) {
         return new ResultUtils<T>(ResultCode.SUCCESS.getCode(), ResultCode.SUCCESS.getMessage(), data, true);
     }
 
     /**
      * 失败
      */
-    public static <T> ResultUtils fail() {
+    public static <T> ResultUtils<T> fail() {
         return new ResultUtils<T>(ResultCode.FAIL.getCode(), ResultCode.FAIL.getMessage(), null, false);
     }
 
     /**
      * 失败
      */
-    public static <T> ResultUtils fail(T data) {
+    public static <T> ResultUtils<T> fail(T data) {
         return new ResultUtils<T>(ResultCode.FAIL.getCode(), ResultCode.FAIL.getMessage(), data, false);
     }
 

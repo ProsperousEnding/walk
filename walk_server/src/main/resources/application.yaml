@@ -6,7 +6,7 @@ spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://1.13.4.248:3306/datastorm?allowMutiQueries=true&rewriteBatchedStatements=true&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false&autoReconnect=true&allowPublicKeyRetrieval=true&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://1.13.4.248:3306/data_storm?allowMutiQueries=true&rewriteBatchedStatements=true&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false&autoReconnect=true&allowPublicKeyRetrieval=true&allowPublicKeyRetrieval=true
     username: root
     password: Fhl0009252937#
     hikari:
